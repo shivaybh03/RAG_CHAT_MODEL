@@ -7,11 +7,12 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.prompts import PromptTemplate
+google_api_key = st.secrets.get("GOOGLE_API_KEY", os.getenv("GOOGLE_API_KEY"))
 
 load_dotenv()
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
-    google_api_key=os.getenv("GOOGLE_API_KEY"),
+    google_api_key=google_api_key,
     temperature=0.2
 )
 
