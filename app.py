@@ -117,7 +117,7 @@ with st.sidebar:
 
 
 if st.session_state.view == "chat":
-    st.title("🛡️ Health Insurance RAG Chat")
+    st.title("🛡️ Health Insurance ChatBot")
     user_query = st.text_input("💬 Ask your question")
 
     if user_query:
