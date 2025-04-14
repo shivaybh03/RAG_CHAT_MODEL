@@ -7,7 +7,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.prompts import PromptTemplate
-google_api_key = st.secrets[GOOGLE_API_KEY]
+google_api_key = st.secrets["GOOGLE_API_KEY"]
 
 load_dotenv()
 llm = ChatGoogleGenerativeAI(
